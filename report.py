@@ -81,6 +81,6 @@ def employee_plot(df, target, time):
         daily_df = df.groupby([pd.Grouper(key='Date', freq='Y'),'Operator ID'])[target].sum().reset_index()
         fig = px.line(daily_df, x="Date", y=target, color='Operator ID')
     if time == 'Datetime':
-        daily_df = df.groupby([pd.Grouper(key='Date', freq='h',,'Operator ID'))[target].sum().reset_index()
+        daily_df = df.groupby([pd.Grouper(key='Date', freq='h'),'Operator ID'])[target].sum().reset_index()
         fig = px.line(daily_df, x="Date", y=target, color='Operator ID')
     return fig
