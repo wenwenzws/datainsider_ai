@@ -20,6 +20,7 @@ def login():
     account = {
         "vera_1029@outlook.com": "1029",
         "oldhomeless@gmail.com": "0411",
+        "guest": "9999"
     }
     username = st.text_input("Enter Email: ")
     password = st.text_input("Enter Password:")
