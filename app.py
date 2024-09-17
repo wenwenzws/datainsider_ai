@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-import home, login, sales_dash, employ_dash, forecast, profile, contact
+import home, login, sales_dash, employ_dash, forecast, profile_page, contact
 
 hide_st_style = """
                 <style>
@@ -77,7 +77,7 @@ class MultiApp:
             if 'useremail' not in st.session_state or st.session_state['useremail'] == '':
                 st.warning('Please log in to access other sections')
             else:
-                profile.app()
+                profile_page.app()
         elif selected_option == 'Contact Us':
             contact.app()
 

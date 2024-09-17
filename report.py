@@ -62,25 +62,25 @@ def employee_plot(df, target, time):
     df['Date'] = pd.to_datetime(df['Date'])
 
     if time == 'Date':
-        daily_df = df.groupby(by=['Date','Operater ID'])[target].sum().reset_index()
-        fig = px.line(daily_df, x="Date", y=target, color='Operater ID')
-    if time == 'Week':
-    # Group by week
-        daily_df = df.resample('W', on='Date')[target].sum().reset_index()
-        fig = px.line(daily_df, x="Date", y=target, color='Operater ID')
+        daily_df = df.groupby(by=['Date','Operator ID'])[target].sum().reset_index()
+        fig = px.line(daily_df, x="Date", y=target, color='Operator ID')
+    # if time == 'Week':
+    # # Group by week
+    #     daily_df = df.resample('W', on='Date')[target].sum().reset_index()
+    #     fig = px.line(daily_df, x="Date", y=target, color='Operator ID')
     if time == 'Weekday':
     # Group by weekday
-        daily_df = df.groupby(by=['Weekday','Operater ID'])[target].sum().reset_index()
-        fig = px.line(daily_df, x="Weekday", y=target, color='Operater ID')
+        daily_df = df.groupby(by=['Weekday','Operator ID'])[target].sum().reset_index()
+        fig = px.line(daily_df, x="Weekday", y=target, color='Operator ID')
     if time == 'Month':
     # Group by month
-        daily_df = df.groupby(pd.Grouper(key='Date', freq='M'))[target].sum().reset_index()
-        fig = px.line(daily_df, x="Date", y=target, color='Operater ID')
+        daily_df = df.groupby([pd.Grouper(key='Date', freq='ME'),'Operator ID'])[target].sum().reset_index()
+        fig = px.line(daily_df, x="Date", y=target, color='Operator ID')
     if time == 'Year':
     # Group by year
-        daily_df = df.groupby(pd.Grouper(key='Date', freq='Y'))[target].sum().reset_index()
-        fig = px.line(daily_df, x="Date", y=target, color='Operater ID')
+        daily_df = df.groupby([pd.Grouper(key='Date', freq='Y'),'Operator ID'])[target].sum().reset_index()
+        fig = px.line(daily_df, x="Date", y=target, color='Operator ID')
     if time == 'Datetime':
-        daily_df = df.groupby(pd.Grouper(key='Date', freq='h'))[target].sum().reset_index()
-        fig = px.line(daily_df, x="Date", y=target, color='Operater ID')
+        daily_df = df.groupby([pd.Grouper(key='Date', freq='h',,'Operator ID'))[target].sum().reset_index()
+        fig = px.line(daily_df, x="Date", y=target, color='Operator ID')
     return fig
