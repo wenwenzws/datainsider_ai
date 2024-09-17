@@ -36,8 +36,8 @@ class MultiApp:
         with st.sidebar:
             selected_option = option_menu(
                 menu_title='Datainsider AI',
-                options=['Home', 'Login', 'Sales_Monitor', 'Employee_Monitor', 'Forecast','Profile', 'Contact Us'],
-                icons=['house-door-fill','box-arrow-in-right','graph-up','people', 'magic','person-fill', 'wechat'],
+                options=['Home', 'Login', 'Sales Monitor', 'Employee Monitor', 'Inventory Monitor', 'Forecast','Profile', 'Contact Us'],
+                icons=['house-door-fill','box-arrow-in-right','graph-up','people','archive' 'magic','person-fill', 'wechat'],
                 menu_icon='robot',
                 default_index=0,
                 # styles={
@@ -54,20 +54,27 @@ class MultiApp:
             login.app()
         #elif 'useremail' not in st.session_state or st.session_state['useremail'] == '':
            # st.warning('Please log in to access other sections')
-        elif selected_option == 'Sales_Monitor':
+        elif selected_option == 'Sales Monitor':
             if 'useremail' not in st.session_state or st.session_state['useremail'] == '':
                 st.warning('Please log in to access other sections')
             elif 'data' not in st.session_state:
                 st.warning('Please upload a file to access this section')
             else:
                 sales_dash.app()
-        elif selected_option == "Employee_Monitor":
+        elif selected_option == "Employee Monitor":
             if 'useremail' not in st.session_state or st.session_state['useremail'] == '':
                 st.warning('Please log in to access other sections')
             elif 'data' not in st.session_state:
                 st.warning('Please upload a file to access this section')
             else:
                 employ_dash.app()
+        elif selected_option == "Inventory Monitor":
+            if 'useremail' not in st.session_state or st.session_state['useremail'] == '':
+                st.warning('Please log in to access other sections')
+            elif 'data' not in st.session_state:
+                st.warning('Please upload a file to access this section')
+            else:
+                st.write('To be implemented')
         elif selected_option == "Forecast":
             if 'useremail' not in st.session_state or st.session_state['useremail'] == '':
                 st.warning('Please log in to access other sections')
