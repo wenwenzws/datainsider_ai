@@ -17,7 +17,7 @@ def  load_value(key):
     st.session_state["_"+key] = st.session_state[key]
 
 def send_email(email_address):
-    message = email_address #+'/'+name+'/'+transaction_id
+    message = email_address#+'/'+name+'/'+transaction_id
     try:
         message = MIMEText(message)
         message['To'] = st.secrets['email_user']

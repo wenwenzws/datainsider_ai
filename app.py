@@ -52,8 +52,8 @@ class MultiApp:
             home.app()
         elif selected_option == 'Login':
             login.app()
-        elif 'useremail' not in st.session_state or st.session_state['useremail'] == '':
-            st.warning('Please log in to access other sections')
+        #elif 'useremail' not in st.session_state or st.session_state['useremail'] == '':
+           # st.warning('Please log in to access other sections')
         elif selected_option == 'Sales_Monitor':
             if 'useremail' not in st.session_state or st.session_state['useremail'] == '':
                 st.warning('Please log in to access other sections')
