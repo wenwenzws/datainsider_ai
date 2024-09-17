@@ -14,6 +14,8 @@ hide_st_style = """
 st.set_page_config(
     page_title="Datainsider Profit Mangemesnt Tool",
     page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded",
 )
 
 st.markdown(hide_st_style, unsafe_allow_html=True)
@@ -38,12 +40,12 @@ class MultiApp:
                 icons=['house-door-fill','box-arrow-in-right','graph-up','people', 'magic','person-fill', 'wechat'],
                 menu_icon='robot',
                 default_index=0,
-                styles={
-                    "container": {"padding": "5!important", "background-color": 'black'},
-                    "icon": {"color": "white", "font-size": "23px"},
-                    "nav-link": {"color": "white", "font-size": "18px", "text-align": "left", "margin": "0px", "--hover-color": " #6FC276"},
-                    "nav-link-selected": {"background-color": "#02ab21"},
-                }
+                # styles={
+                #     "container": {"padding": "5!important", "background-color": 'black'},
+                #     "icon": {"color": "white", "font-size": "23px"},
+                #     "nav-link": {"color": "white", "font-size": "18px", "text-align": "left", "margin": "0px", "--hover-color": " #6FC276"},
+                #     "nav-link-selected": {"background-color": "#02ab21"},
+                # }
             )
 
         if selected_option == "Home":

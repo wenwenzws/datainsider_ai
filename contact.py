@@ -8,6 +8,5 @@ def app():
     container = st.container(border=True)
     with container:
         cols1, cols2 = st.columns([7,2])
-        cols2.image('images/moneylogo.png', width=150)    
         cols1.subheader(':green[Chat with Us]')
-        cols1.markdown('Contact via: [E-mail](https://vera_1029@outlook.com)')
+        cols1.markdown('Contact via: [E-mail](lovewenwenbb@gmail.com)')
