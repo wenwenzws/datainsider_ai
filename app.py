@@ -35,7 +35,7 @@ class MultiApp:
     def run(self):
         with st.sidebar:
             selected_option = option_menu(
-                menu_title='Operation Monitor',
+                menu_title='Datainsider AI',
                 options=['Home', 'Login', 'Sales_Monitor', 'Employee_Monitor', 'Forecast','Profile', 'Contact Us'],
                 icons=['house-door-fill','box-arrow-in-right','graph-up','people', 'magic','person-fill', 'wechat'],
                 menu_icon='robot',
