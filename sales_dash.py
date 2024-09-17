@@ -6,8 +6,7 @@ from report import group_plot
 
 def app():
     df = pd.read_excel(st.session_state['data'])
-    st.write(df)
-    list_of_columns = df.columns.tolist()   
+    #list_of_columns = df.columns.tolist()   
     df['Date'] = pd.to_datetime(df['Date'])
 
     # Add a column for the weekday name

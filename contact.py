@@ -5,4 +5,9 @@ def app():
     st.write("We are happy to help you")
     st.snow()
     st.balloons()
-    st.write("Email: Vera_1029@outlook.com")
+    container = st.container(border=True)
+    with container:
+        cols1, cols2 = st.columns([7,2])
+        cols2.image('images/moneylogo.png', width=150)    
+        cols1.subheader(':green[Chat with Us]')
+        cols1.markdown('Contact via: [E-mail](https://vera_1029@outlook.com)')
