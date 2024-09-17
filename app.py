@@ -12,7 +12,7 @@ hide_st_style = """
 
 
 st.set_page_config(
-    page_title="Datainsider Profit Mangement Tool",
+    page_title="Datainsider Profit Mangemesnt Tool",
     page_icon="📊",
 )
 

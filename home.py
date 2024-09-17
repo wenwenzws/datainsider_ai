@@ -6,7 +6,7 @@ def app():
     header1, header2 = st.columns([0.75, 3])
     with header1:
         container1 = st.container(border=True)   
-        container1.image('moneylogo.jpeg', width=100)
+        container1.image('images/moneylogo.jpeg', width=100)
   
     st.header(' :green[Getting Started!!]')
     col1, col2 = st.columns([2, 3])

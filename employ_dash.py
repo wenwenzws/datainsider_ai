@@ -16,7 +16,7 @@ def app():
 
     sales_columns = ['Sales dollars before tax', 'Items_count']
     target = st.selectbox('Select for daily sales per employee', sales_columns)
-    time = st.selectbox('Select the frequency for daily sales', ['Month','Weekday', 'Date','Datetime'])
+    time = st.selectbox('Select the frequency for daily sales', ['Month', 'Weekday', 'Date','Datetime'])
 
     fig = employee_plot(df, target, time)
     event = st.plotly_chart(fig)
