@@ -37,7 +37,7 @@ class MultiApp:
             selected_option = option_menu(
                 menu_title='Datainsider AI',
                 options=['Home', 'Login', 'Sales Monitor', 'Employee Monitor', 'Inventory Monitor', 'Forecast','Profile', 'Contact Us'],
-                icons=['house-door-fill','box-arrow-in-right','graph-up','people','archive' 'magic','person-fill', 'wechat'],
+                icons=['house-door-fill','box-arrow-in-right','graph-up','people', 'archive', 'magic','person-fill', 'wechat'],
                 menu_icon='robot',
                 default_index=0,
                 # styles={
